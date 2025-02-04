@@ -1,0 +1,4 @@
+# using - as an argument refers to STDIN/STDOUT i.e dev/stdin or dev/stdout
+# if we want to open this type of file you have to specify the full location of the file such as ./-
+cat ./-
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx

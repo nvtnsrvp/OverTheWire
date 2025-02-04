@@ -1,0 +1,9 @@
+# The robots.txt file on a webpage tells search engines which directories not to enter.
+http://natas3.natas.labs.overthewire.org/robots.txt
+
+User-agent: *
+Disallow: /s3cr3t/
+
+http://natas3.natas.labs.overthewire.org/s3cr3t/users.txt
+natas4:QryZXc2e0zahULdHrtHxzyYkj59kUxLQ
+

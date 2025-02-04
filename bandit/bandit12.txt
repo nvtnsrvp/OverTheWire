@@ -1,0 +1,60 @@
+# Hexdumps are used to examine data that cannot be represented as strings by displaying it in hexadecimal format.
+# A hexdump has three main columns.
+# 1) address 2) hex representation of the data on that address 3) actual data as strings `.` = hex values that cannot be represented as a string
+# 00000000: 1f8b 0808 dfcd eb66 0203 6461 7461 322e  .......f..data2.
+# xxd <input_file> <output_file> creates hexdumps
+
+file data.txt
+data.txt: ASCII text
+
+mktemp -d
+/tmp/tmp.wVhs0w7TXM
+touch /tmp/tmp.wVhs0w7TXM/decoded.txt
+
+xxd -r data.txt /tmp/tmp.wVhs0w7TXM/decoded.txt
+
+file /tmp/tmp.wVhs0w7TXM/decoded.txt
+/tmp/tmp.wVhs0w7TXM/decoded.txt: gzip compressed data, was "data2.bin", last modified: Thu Sep 19 07:08:15 2024, max compression, from Unix, original size modulo 2^32 574
+
+mv /tmp/tmp.wVhs0w7TXM/decoded.txt /tmp/tmp.wVhs0w7TXM/decoded.gz
+gzip -d  /tmp/tmp.wVhs0w7TXM/decoded.gz
+
+file /tmp/tmp.wVhs0w7TXM/decoded
+/tmp/tmp.wVhs0w7TXM/decoded2: bzip2 compressed data, block size = 900k
+
+bzip2 -d /tmp/tmp.wVhs0w7TXM/decoded
+bzip2: Can't guess original name for /tmp/tmp.wVhs0w7TXM/decoded -- using /tmp/tmp.wVhs0w7TXM/decoded.out
+file /tmp/tmp.wVhs0w7TXM/decoded.out
+/tmp/tmp.wVhs0w7TXM/decoded.out: gzip compressed data, was "data4.bin", last modified: Thu Sep 19 07:08:15 2024, max compression, from Unix, original size modulo 2^32 20480
+
+cd /tmp/tmp.wVhs0w7TXM/
+mv decoded.out decoded.out.gz
+gzip -d /tmp/tmp.wVhs0w7TXM/decoded.out.gz
+
+file decoded.out
+decoded.out: POSIX tar archive (GNU)
+
+tar -xf decoded.out
+file data5.bin
+data5.bin: POSIX tar archive (GNU)
+
+tar -xf data5.bin
+file data6.bin
+data6.bin: bzip2 compressed data, block size = 900k
+
+bzip2 -d /tmp/tmp.wVhs0w7TXM/data6.bin
+bzip2: Can't guess original name for /tmp/tmp.wVhs0w7TXM/data6.bin -- using /tmp/tmp.wVhs0w7TXM/data6.bin.out
+file data6.bin.out
+data6.bin.out: POSIX tar archive (GNU)
+
+file data8.bin
+data8.bin: gzip compressed data, was "data9.bin", last modified: Thu Sep 19 07:08:15 2024, max compression, from Unix, original size modulo 2^32 49
+mv data8.bin data8.bin.gz
+gzip -d data8.bin.gz
+
+file data8.bin
+data8.bin: ASCII text
+
+cat data8.bin
+The password is FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn
+

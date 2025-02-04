@@ -1,0 +1,18 @@
+# Option + Command + u
+<script>var wechallinfo = { "level": "natas2", "pass": "TguMNxKo1DSa1tujBLuZJnDUlCcUAPlI" };</script></head>
+# irrelevant
+
+<img src="files/pixel.png">
+http://natas2.natas.labs.overthewire.org/files/pixel.png
+
+# Let's see if there is any other files in files
+http://natas2.natas.labs.overthewire.org/files
+http://natas2.natas.labs.overthewire.org/files/users.txt
+
+# username:password
+alice:BYNdCesZqW
+bob:jw2ueICLvT
+charlie:G5vCxkVV3m
+natas3:3gqisGdR0pjm6tpkDKdIWO2hSvchLeYH
+eve:zo4mJWyNj2
+mallory:9urtcpzBmH

